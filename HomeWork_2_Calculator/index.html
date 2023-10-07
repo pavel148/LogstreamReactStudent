@@ -3,35 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
 </head>
 <body>
-    <input id="expression" class="expression " type="text">
+    <p class="heading">Простой калькулятор</p>
+    <input id="expression" class="expression" type="text">
     <div class="container">
-        
-    <div class="numbers">
-        <button id="0"  value="0" onclick="get_number(0)">0</button>
-        <button id="1"  value="1" onclick="get_number(1)">1</button>
-        <button id="2"  value="2" onclick="get_number(2)">2</button>
-        <button id="3"  value="3" onclick="get_number(3)">3</button>
-        <button id="4"  value="4" onclick="get_number(4)">4</button>
-        <button id="5"  value="5" onclick="get_number(5)">5</button>
-        <button id="6"  value="6" onclick="get_number(6)">6</button>
-        <button id="7"  value="7" onclick="get_number(7)">7</button>
-        <button id="8"  value="8" onclick="get_number(8)">8</button>
-        <button id="9"  value="9" onclick="get_number(9)">9</button>
-    </div>
-         <div class="operations">
-            <button id="+"      value="+"    onclick="get_number('+')">+</button>
-            <button id="-"     value="-"    onclick="get_number('-')">-</button>
-            <button id="*"     value="*"    onclick="get_number('*')">*</button>
-            <button id="/"     value="/"    onclick="get_number('/')">/</button>
-            <button id="="   value="="    onclick="get_number('=')">=</button>
+        <p id="conclusion" class="conclusion"></p>
+        <div class="numbers">
+            <button id="0" value="0" onclick="get_number('0')">0</button>
+            <button id="1" value="1" onclick="get_number('1')">1</button>
+            <button id="2" value="2" onclick="get_number('2')">2</button>
+            <button id="3" value="3" onclick="get_number('3')">3</button>
+            <button id="4" value="4" onclick="get_number('4')">4</button>
+            <button id="5" value="5" onclick="get_number('5')">5</button>
+            <button id="6" value="6" onclick="get_number('6')">6</button>
+            <button id="7" value="7" onclick="get_number('7')">7</button>
+            <button id="8" value="8" onclick="get_number('8')">8</button>
+            <button id="9" value="9" onclick="get_number('9')">9</button>
+
+           
         </div>
         
-        <p if="conclusion" class="conclusion"></p>
+        <div class="operations">
+            <button id="+" value="+" onclick="get_operation('+')">+</button>
+            <button id="-" value="-" onclick="get_operation('-')">-</button>
+            <button id="*" value="*" onclick="get_operation('*')">*</button>
+            <button id="/" value="/" onclick="get_operation('/')">/</button>
+            <button id="=" value="=" onclick="calculate('=')">=</button>
+
+            <div id="clear" class="clear">
+                <button id="clear_button" onclick="clearCalculator()">сlear</button>
+            </div>
+
+        </div>
+        <div class="history">
+            <p class="history_operations">История операций: </p>
+            <p id="history_operations"class="history_operations"></p>
+        </div>
+       
     </div>
 </body>
 </html>
