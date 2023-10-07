@@ -1,2 +1,2 @@
 # LogstreamReactStudent
-Домашнии задние по Js и React
+Домашние задние по Js и React
